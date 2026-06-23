@@ -51,12 +51,6 @@
             <mat-card-title>{{ q.title }}</mat-card-title>
             <span class="card-spacer"></span>
             <span [class]="'badge badge-' + q.difficultyLevel.toLowerCase()">{{ q.difficultyLevel }}</span>
-            <button mat-icon-button
-                    [color]="isBookmarked(q.id) ? 'warn' : ''"
-                    (click)="toggleBookmark(q.id, $event)"
-                    [matTooltip]="isBookmarked(q.id) ? 'Remove bookmark' : 'Bookmark'">
-              <mat-icon>{{ isBookmarked(q.id) ? 'bookmark' : 'bookmark_border' }}</mat-icon>
-            </button>
           </mat-card-header>
 
           <mat-card-content>

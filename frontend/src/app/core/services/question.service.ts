@@ -27,14 +27,6 @@ export class QuestionService {
     return this.http.post<Question>(this.base, request);
   }
 
-  update(id: string, request: QuestionRequest): Observable<Question> {
-    return this.http.put<Question>(`${this.base}/${id}`, request);
-  }
-
-  deactivate(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.base}/${id}`);
-  }
-
   getTopics(): Observable<string[]> {
     return this.http.get<string[]>(`${this.base}/topics`);
   }

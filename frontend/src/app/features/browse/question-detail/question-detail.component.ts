@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 
 import { QuestionService } from '../../../core/services/question.service';
-import { BookmarkService } from '../../../core/services/bookmark.service';
 import { Question } from '../../../core/models/question.model';
 
 @Component({
@@ -20,27 +19,12 @@ export class QuestionDetailComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly questionService = inject(QuestionService);
-  private readonly bookmarkService = inject(BookmarkService);
 
   question: Question | null = null;
-  bookmarkId: string | null = null;
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')!;
     this.questionService.getById(id).subscribe(q => this.question = q);
-    this.bookmarkService.list().subscribe(list => {
-      const bm = list.find(b => b.question.id === id);
-      this.bookmarkId = bm?.id ?? null;
-    });
-  }
-
-  toggleBookmark(): void {
-    if (!this.question) return;
-    if (this.bookmarkId) {
-      this.bookmarkService.delete(this.bookmarkId).subscribe(() => this.bookmarkId = null);
-    } else {
-      this.bookmarkService.create({ questionId: this.question.id }).subscribe(b => this.bookmarkId = b.id);
-    }
   }
 
   back(): void { this.router.navigate(['/browse']); }

@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,7 +20,6 @@ import { DifficultyLevel, Question, TechStack, Topic } from '../../../core/model
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    RouterLink,
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
@@ -94,9 +93,5 @@ export class QuestionListComponent implements OnInit {
 
   editQuestion(id: string): void {
     this.router.navigate(['/admin/questions', id, 'edit']);
-  }
-
-  deactivateQuestion(id: string): void {
-    this.questionService.deactivate(id).subscribe(() => this.loadQuestions());
   }
 }
