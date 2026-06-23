@@ -1,0 +1,50 @@
+@if (question) {
+  <div class="detail-container">
+    <button mat-stroked-button (click)="back()">
+      <mat-icon>arrow_back</mat-icon> Back
+    </button>
+
+    <mat-card class="detail-card">
+      <mat-card-header>
+        <mat-card-title>{{ question.title }}</mat-card-title>
+        <span class="spacer"></span>
+        <span [class]="'badge badge-' + question.difficultyLevel.toLowerCase()">{{ question.difficultyLevel }}</span>
+        <button mat-icon-button [color]="bookmarkId ? 'warn' : ''" (click)="toggleBookmark()">
+          <mat-icon>{{ bookmarkId ? 'bookmark' : 'bookmark_border' }}</mat-icon>
+        </button>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="meta-row">
+          <span class="chip">{{ question.topic }}</span>
+          <span class="chip">{{ question.techStack }}</span>
+          @if (question.experienceRangeMin != null) {
+            <span class="chip">{{ question.experienceRangeMin }}–{{ question.experienceRangeMax }} yrs</span>
+          }
+          @for (tag of question.tags; track tag) {
+            <mat-chip>{{ tag }}</mat-chip>
+          }
+        </div>
+
+        <section class="section">
+          <h4>Question</h4>
+          <p>{{ question.body }}</p>
+        </section>
+
+        @if (question.answer) {
+          <section class="section answer">
+            <h4>Model Answer</h4>
+            <p>{{ question.answer }}</p>
+          </section>
+        }
+
+        @if (question.followUpProbes) {
+          <section class="section probes">
+            <h4>Follow-up Probes</h4>
+            <p>{{ question.followUpProbes }}</p>
+          </section>
+        }
+      </mat-card-content>
+    </mat-card>
+  </div>
+}

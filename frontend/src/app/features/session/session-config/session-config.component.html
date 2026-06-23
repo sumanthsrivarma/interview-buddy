@@ -1,0 +1,61 @@
+<mat-card class="config-card">
+  <mat-card-header><mat-card-title>New Mock Session</mat-card-title></mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="config-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Session Name</mat-label>
+        <input matInput formControlName="name" placeholder="e.g. Java Senior Round 1" />
+        @if (form.controls.name.hasError('required') && form.controls.name.touched) {
+          <mat-error>Name is required</mat-error>
+        }
+      </mat-form-field>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Topic</mat-label>
+          <mat-select formControlName="topic">
+            <mat-option [value]="null">Any</mat-option>
+            @for (t of topics; track t) { <mat-option [value]="t">{{ t }}</mat-option> }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Tech Stack</mat-label>
+          <mat-select formControlName="techStack">
+            <mat-option [value]="null">Any</mat-option>
+            @for (s of techStacks; track s) { <mat-option [value]="s">{{ s }}</mat-option> }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Difficulty</mat-label>
+          <mat-select formControlName="difficultyLevel">
+            <mat-option [value]="null">Any</mat-option>
+            @for (d of difficulties; track d) { <mat-option [value]="d">{{ d }}</mat-option> }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Experience (yrs)</mat-label>
+          <input matInput type="number" formControlName="experienceRange" min="0" placeholder="e.g. 5" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Number of Questions</mat-label>
+          <input matInput type="number" formControlName="questionCount" min="1" max="50" />
+          @if (form.controls.questionCount.hasError('min') || form.controls.questionCount.hasError('max')) {
+            <mat-error>1–50</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
+      <div class="actions">
+        <button mat-flat-button color="primary" type="submit" [disabled]="creating">
+          {{ creating ? 'Creating…' : 'Start Session' }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,96 @@
+<div class="browse-layout">
+  <!-- Filter sidebar -->
+  <aside class="filter-sidebar">
+    <h3>Filters</h3>
+    <form [formGroup]="filterForm" (ngSubmit)="applyFilters()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Topic</mat-label>
+        <mat-select formControlName="topic">
+          <mat-option [value]="null">All Topics</mat-option>
+          @for (t of topics; track t) {
+            <mat-option [value]="t">{{ t }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Tech Stack</mat-label>
+        <mat-select formControlName="techStack">
+          <mat-option [value]="null">All Stacks</mat-option>
+          @for (s of techStacks; track s) {
+            <mat-option [value]="s">{{ s }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Difficulty</mat-label>
+        <mat-select formControlName="difficultyLevel">
+          <mat-option [value]="null">All</mat-option>
+          @for (d of difficulties; track d) {
+            <mat-option [value]="d">{{ d }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" type="submit" class="full-width">Apply</button>
+      <button mat-stroked-button type="button" class="full-width mt-8" (click)="resetFilters()">Reset</button>
+    </form>
+  </aside>
+
+  <!-- Question cards -->
+  <main class="question-grid">
+    @if (loading) {
+      <div class="center-spinner"><mat-spinner diameter="48"></mat-spinner></div>
+    } @else if (questions.length === 0) {
+      <p class="empty-state">No questions match the selected filters.</p>
+    } @else {
+      @for (q of questions; track q.id) {
+        <mat-card class="question-card" (click)="toggleExpand(q.id)">
+          <mat-card-header>
+            <mat-card-title>{{ q.title }}</mat-card-title>
+            <span class="card-spacer"></span>
+            <span [class]="'badge badge-' + q.difficultyLevel.toLowerCase()">{{ q.difficultyLevel }}</span>
+            <button mat-icon-button
+                    [color]="isBookmarked(q.id) ? 'warn' : ''"
+                    (click)="toggleBookmark(q.id, $event)"
+                    [matTooltip]="isBookmarked(q.id) ? 'Remove bookmark' : 'Bookmark'">
+              <mat-icon>{{ isBookmarked(q.id) ? 'bookmark' : 'bookmark_border' }}</mat-icon>
+            </button>
+          </mat-card-header>
+
+          <mat-card-content>
+            <div class="tag-row">
+              <span class="topic-chip">{{ q.topic }}</span>
+              <span class="topic-chip">{{ q.techStack }}</span>
+              @for (tag of q.tags; track tag) {
+                <mat-chip>{{ tag }}</mat-chip>
+              }
+            </div>
+
+            @if (expandedId === q.id) {
+              <div class="expanded-content" (click)="$event.stopPropagation()">
+                <p class="question-body">{{ q.body }}</p>
+                @if (q.answer) {
+                  <div class="answer-block">
+                    <strong>Answer</strong>
+                    <p>{{ q.answer }}</p>
+                  </div>
+                }
+                @if (q.followUpProbes) {
+                  <div class="probes-block">
+                    <strong>Follow-up Probes</strong>
+                    <p>{{ q.followUpProbes }}</p>
+                  </div>
+                }
+                <a mat-stroked-button [routerLink]="['/browse', q.id]" class="mt-8">
+                  Full Detail
+                </a>
+              </div>
+            }
+          </mat-card-content>
+        </mat-card>
+      }
+    }
+  </main>
+</div>

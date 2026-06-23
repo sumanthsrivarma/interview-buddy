@@ -1,0 +1,18 @@
+.session-layout { display: flex; flex-direction: column; gap: 16px; max-width: 760px; margin: 0 auto; }
+.session-header { display: flex; justify-content: space-between; align-items: center; h2 { margin: 0; } }
+.progress-label { color: rgba(0,0,0,0.54); font-size: 14px; }
+mat-card-header { display: flex; align-items: center; }
+.spacer { flex: 1; }
+.body-text { line-height: 1.6; color: rgba(0,0,0,0.8); }
+.answer-block, .probes-block { background: #f5f5f5; padding: 12px; border-radius: 6px; margin-top: 12px; p { margin: 4px 0 0; } }
+.full-width { width: 100%; }
+.note-field { margin-top: 16px; }
+.badge { padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+.badge-easy { background: #e8f5e9; color: #2e7d32; }
+.badge-medium { background: #fff8e1; color: #f57f17; }
+.badge-hard { background: #fce4ec; color: #c62828; }
+.confidence-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-confident { background: #e8f5e9; color: #2e7d32; &.selected { background: #2e7d32; color: #fff; } }
+.btn-needs-work { background: #fff8e1; color: #f57f17; &.selected { background: #f57f17; color: #fff; } }
+.btn-skipped { background: #f5f5f5; color: #757575; &.selected { background: #757575; color: #fff; } }
+.nav-row { display: flex; gap: 12px; justify-content: space-between; }

@@ -1,0 +1,5 @@
+.config-card { max-width: 700px; margin: 0 auto; }
+.config-form { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
+.full-width { width: 100%; }
+.form-row { display: flex; gap: 16px; flex-wrap: wrap; mat-form-field { flex: 1 1 160px; } }
+.actions { display: flex; justify-content: flex-end; padding-top: 8px; }

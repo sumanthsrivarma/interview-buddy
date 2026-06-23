@@ -1,0 +1,130 @@
+<mat-card class="form-card">
+  <mat-card-header>
+    <mat-card-title>{{ isEditMode ? 'Edit Question' : 'New Question' }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="question-form">
+
+      <!-- Title -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Short question title" />
+        @if (form.controls.title.hasError('required') && form.controls.title.touched) {
+          <mat-error>Title is required</mat-error>
+        }
+        @if (form.controls.title.hasError('maxlength')) {
+          <mat-error>Max 500 characters</mat-error>
+        }
+      </mat-form-field>
+
+      <!-- Body -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Question Body</mat-label>
+        <textarea matInput formControlName="body" rows="4"
+                  placeholder="Full question text"></textarea>
+        @if (form.controls.body.hasError('required') && form.controls.body.touched) {
+          <mat-error>Question body is required</mat-error>
+        }
+      </mat-form-field>
+
+      <!-- Answer -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Model Answer</mat-label>
+        <textarea matInput formControlName="answer" rows="6"
+                  placeholder="Model answer (optional)"></textarea>
+      </mat-form-field>
+
+      <!-- Follow-up Probes -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Follow-up Probes</mat-label>
+        <textarea matInput formControlName="followUpProbes" rows="3"
+                  placeholder="e.g. How does X affect Y? | What happens when…"></textarea>
+      </mat-form-field>
+
+      <!-- Topic / Stack / Difficulty row -->
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Topic</mat-label>
+          <mat-select formControlName="topic">
+            @for (t of topics; track t) {
+              <mat-option [value]="t">{{ t }}</mat-option>
+            }
+          </mat-select>
+          @if (form.controls.topic.hasError('required') && form.controls.topic.touched) {
+            <mat-error>Required</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Tech Stack</mat-label>
+          <mat-select formControlName="techStack">
+            @for (s of techStacks; track s) {
+              <mat-option [value]="s">{{ s }}</mat-option>
+            }
+          </mat-select>
+          @if (form.controls.techStack.hasError('required') && form.controls.techStack.touched) {
+            <mat-error>Required</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Difficulty</mat-label>
+          <mat-select formControlName="difficultyLevel">
+            @for (d of difficulties; track d) {
+              <mat-option [value]="d">{{ d }}</mat-option>
+            }
+          </mat-select>
+          @if (form.controls.difficultyLevel.hasError('required') && form.controls.difficultyLevel.touched) {
+            <mat-error>Required</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
+      <!-- Experience range row -->
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Experience Min (yrs)</mat-label>
+          <input matInput type="number" formControlName="experienceRangeMin" min="0" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Experience Max (yrs)</mat-label>
+          <input matInput type="number" formControlName="experienceRangeMax" min="0" />
+        </mat-form-field>
+      </div>
+
+      <!-- Tags chip input -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Tags</mat-label>
+        <mat-chip-grid #chipGrid>
+          @for (tag of tags; track tag) {
+            <mat-chip-row (removed)="removeTag(tag)">
+              {{ tag }}
+              <button matChipRemove>
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          }
+        </mat-chip-grid>
+        <input placeholder="Add tag and press Enter…"
+               [matChipInputFor]="chipGrid"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               (matChipInputTokenEnd)="addTag($event)" />
+      </mat-form-field>
+
+      <!-- Active toggle (edit mode only) -->
+      @if (isEditMode) {
+        <mat-checkbox formControlName="active" class="active-check">Active</mat-checkbox>
+      }
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button mat-stroked-button type="button" (click)="cancel()">Cancel</button>
+        <button mat-flat-button color="primary" type="submit" [disabled]="saving">
+          {{ saving ? 'Saving…' : (isEditMode ? 'Update' : 'Create') }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

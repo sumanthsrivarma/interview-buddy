@@ -1,0 +1,45 @@
+<div class="dashboard-layout">
+  <h2>Dashboard</h2>
+
+  <div class="charts-row">
+    <mat-card class="chart-card">
+      <mat-card-header><mat-card-title>Topic Confidence Breakdown</mat-card-title></mat-card-header>
+      <mat-card-content>
+        @if (topicChartData.labels && topicChartData.labels.length > 0) {
+          <canvas baseChart [data]="topicChartData" [options]="topicChartOptions" type="bar"></canvas>
+        } @else {
+          <p class="empty">Complete some sessions to see topic breakdown.</p>
+        }
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="chart-card">
+      <mat-card-header><mat-card-title>Weekly Streak (last 12 weeks)</mat-card-title></mat-card-header>
+      <mat-card-content>
+        @if (streakChartData.labels && streakChartData.labels.length > 0) {
+          <canvas baseChart [data]="streakChartData" [options]="streakChartOptions" type="bar"></canvas>
+        } @else {
+          <p class="empty">No session history yet.</p>
+        }
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-header><mat-card-title>Weak Areas</mat-card-title></mat-card-header>
+    <mat-card-content>
+      @if (weakAreas.length === 0) {
+        <p class="empty">No weak areas detected. Keep practicing!</p>
+      }
+      <mat-list>
+        @for (area of weakAreas; track area.topic) {
+          <mat-list-item>
+            <mat-icon matListItemIcon color="warn">warning</mat-icon>
+            <span matListItemTitle>{{ area.topic }}</span>
+            <span matListItemLine>{{ area.needsWorkCount }} question(s) marked "Needs Work"</span>
+          </mat-list-item>
+        }
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

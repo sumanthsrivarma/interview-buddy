@@ -1,0 +1,13 @@
+.detail-container { display: flex; flex-direction: column; gap: 16px; }
+.detail-card { max-width: 800px; }
+mat-card-header { display: flex; align-items: center; }
+.spacer { flex: 1; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.chip { background: #e3f2fd; color: #1565c0; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+.badge { padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-right: 4px; }
+.badge-easy { background: #e8f5e9; color: #2e7d32; }
+.badge-medium { background: #fff8e1; color: #f57f17; }
+.badge-hard { background: #fce4ec; color: #c62828; }
+.section { margin-top: 16px; h4 { margin: 0 0 8px; color: rgba(0,0,0,0.6); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; } p { margin: 0; line-height: 1.6; } }
+.answer { background: #f1f8e9; padding: 16px; border-radius: 6px; }
+.probes { background: #f3e5f5; padding: 16px; border-radius: 6px; }

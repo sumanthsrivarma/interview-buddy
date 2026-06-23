@@ -1,0 +1,56 @@
+@if (session) {
+  <div class="summary-layout">
+    <h2>{{ session.name }} — Summary</h2>
+
+    <!-- Stats row -->
+    <div class="stats-row">
+      <mat-card class="stat-card confident">
+        <mat-card-content>
+          <div class="stat-number">{{ session.confidentCount }}</div>
+          <div class="stat-label">Confident</div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="stat-card needs-work">
+        <mat-card-content>
+          <div class="stat-number">{{ session.needsWorkCount }}</div>
+          <div class="stat-label">Needs Work</div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="stat-card skipped">
+        <mat-card-content>
+          <div class="stat-number">{{ session.skippedCount }}</div>
+          <div class="stat-label">Skipped</div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="stat-card not-rated">
+        <mat-card-content>
+          <div class="stat-number">{{ session.notRatedCount }}</div>
+          <div class="stat-label">Not Rated</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Question list -->
+    <mat-card>
+      <mat-card-header><mat-card-title>Questions</mat-card-title></mat-card-header>
+      <mat-list>
+        @for (attempt of session.attempts; track attempt.id) {
+          <mat-list-item>
+            <mat-icon matListItemIcon [class]="confidenceColor(attempt.confidence)">
+              {{ confidenceIcon(attempt.confidence) }}
+            </mat-icon>
+            <span matListItemTitle>{{ attempt.question.title }}</span>
+            @if (attempt.personalNote) {
+              <span matListItemLine class="note">{{ attempt.personalNote }}</span>
+            }
+          </mat-list-item>
+        }
+      </mat-list>
+    </mat-card>
+
+    <div class="actions">
+      <a mat-stroked-button routerLink="/sessions/history">All Sessions</a>
+      <button mat-flat-button color="primary" (click)="newSession()">New Session</button>
+    </div>
+  </div>
+}

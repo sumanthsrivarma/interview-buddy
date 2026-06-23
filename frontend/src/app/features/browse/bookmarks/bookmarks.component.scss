@@ -1,0 +1,11 @@
+.empty { color: rgba(0,0,0,0.54); padding: 24px 0; }
+.bookmark-panel { margin-bottom: 8px; }
+.body-text { color: rgba(0,0,0,0.7); line-height: 1.6; }
+.note-row { display: flex; align-items: center; gap: 4px; margin-top: 8px; }
+.note-text { flex: 1; color: rgba(0,0,0,0.6); font-style: italic; }
+.full-width { width: 100%; margin-top: 8px; }
+.edit-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.badge { padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+.badge-easy { background: #e8f5e9; color: #2e7d32; }
+.badge-medium { background: #fff8e1; color: #f57f17; }
+.badge-hard { background: #fce4ec; color: #c62828; }

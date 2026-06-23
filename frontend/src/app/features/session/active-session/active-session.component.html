@@ -1,0 +1,73 @@
+@if (session && current) {
+  <div class="session-layout">
+    <header class="session-header">
+      <h2>{{ session.name }}</h2>
+      <span class="progress-label">{{ currentIndex + 1 }} / {{ session.attempts.length }}</span>
+    </header>
+
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+
+    <mat-card class="question-card">
+      <mat-card-header>
+        <mat-card-title>{{ current.question.title }}</mat-card-title>
+        <span class="spacer"></span>
+        <span [class]="'badge badge-' + current.question.difficultyLevel.toLowerCase()">{{ current.question.difficultyLevel }}</span>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="body-text">{{ current.question.body }}</p>
+
+        @if (!showAnswer) {
+          <button mat-stroked-button (click)="showAnswer = true">Show Answer</button>
+        } @else {
+          <div class="answer-block">
+            <strong>Answer</strong>
+            <p>{{ current.question.answer }}</p>
+          </div>
+          @if (current.question.followUpProbes) {
+            <div class="probes-block">
+              <strong>Follow-up Probes</strong>
+              <p>{{ current.question.followUpProbes }}</p>
+            </div>
+          }
+        }
+
+        <mat-form-field appearance="outline" class="full-width note-field">
+          <mat-label>Personal Note</mat-label>
+          <textarea matInput [formControl]="noteControl" rows="2" placeholder="How did it go?"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Confidence buttons -->
+    <div class="confidence-row">
+      <button mat-flat-button class="btn-confident"
+              [class.selected]="current.confidence === Confidence.CONFIDENT"
+              (click)="rate(Confidence.CONFIDENT)">
+        ✓ Confident
+      </button>
+      <button mat-flat-button class="btn-needs-work"
+              [class.selected]="current.confidence === Confidence.NEEDS_WORK"
+              (click)="rate(Confidence.NEEDS_WORK)">
+        ⚠ Needs Work
+      </button>
+      <button mat-flat-button class="btn-skipped"
+              [class.selected]="current.confidence === Confidence.SKIPPED"
+              (click)="rate(Confidence.SKIPPED)">
+        → Skip
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-row">
+      <button mat-stroked-button (click)="prev()" [disabled]="currentIndex === 0">
+        ← Prev
+      </button>
+      <button mat-stroked-button (click)="saveNote()">Save Note</button>
+      @if (currentIndex < session.attempts.length - 1) {
+        <button mat-stroked-button (click)="next()">Next →</button>
+      } @else {
+        <button mat-flat-button color="primary" (click)="finish()">Finish Session</button>
+      }
+    </div>
+  </div>
+}

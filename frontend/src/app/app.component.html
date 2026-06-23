@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/browse" routerLinkActive="active-link">Browse</a>
+  <a mat-button routerLink="/sessions/history" routerLinkActive="active-link">Sessions</a>
+  <a mat-button routerLink="/bookmarks" routerLinkActive="active-link">Bookmarks</a>
+  <a mat-button routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+  <a mat-button routerLink="/admin/questions" routerLinkActive="active-link">Admin</a>
+</mat-toolbar>
+
+<main class="main-content">
+  <router-outlet />
+</main>
