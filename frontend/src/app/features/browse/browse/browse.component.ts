@@ -8,11 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { QuestionService } from '../../../core/services/question.service';
-import { BookmarkService } from '../../../core/services/bookmark.service';
 import { DifficultyLevel, Question, TechStack, Topic } from '../../../core/models/question.model';
 
 @Component({
@@ -28,7 +26,6 @@ import { DifficultyLevel, Question, TechStack, Topic } from '../../../core/model
     MatIconModule,
     MatChipsModule,
     MatInputModule,
-    MatTooltipModule,
     MatProgressSpinnerModule
   ],
   templateUrl: './browse.component.html',
@@ -36,11 +33,9 @@ import { DifficultyLevel, Question, TechStack, Topic } from '../../../core/model
 })
 export class BrowseComponent implements OnInit {
   private readonly questionService = inject(QuestionService);
-  private readonly bookmarkService = inject(BookmarkService);
 
   questions: Question[] = [];
   expandedId: string | null = null;
-  bookmarkMap = new Map<string, string>(); // questionId -> bookmarkId
   loading = false;
 
   readonly topics = Object.values(Topic);
@@ -55,7 +50,6 @@ export class BrowseComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadQuestions();
-    this.loadBookmarks();
   }
 
   loadQuestions(): void {
@@ -72,13 +66,6 @@ export class BrowseComponent implements OnInit {
     });
   }
 
-  loadBookmarks(): void {
-    this.bookmarkService.list().subscribe(bookmarks => {
-      this.bookmarkMap.clear();
-      bookmarks.forEach(b => this.bookmarkMap.set(b.question.id, b.id));
-    });
-  }
-
   applyFilters(): void { this.loadQuestions(); }
 
   resetFilters(): void {
@@ -88,23 +75,5 @@ export class BrowseComponent implements OnInit {
 
   toggleExpand(id: string): void {
     this.expandedId = this.expandedId === id ? null : id;
-  }
-
-  isBookmarked(questionId: string): boolean {
-    return this.bookmarkMap.has(questionId);
-  }
-
-  toggleBookmark(questionId: string, event: Event): void {
-    event.stopPropagation();
-    if (this.isBookmarked(questionId)) {
-      const bookmarkId = this.bookmarkMap.get(questionId)!;
-      this.bookmarkService.delete(bookmarkId).subscribe(() => {
-        this.bookmarkMap.delete(questionId);
-      });
-    } else {
-      this.bookmarkService.create({ questionId }).subscribe(b => {
-        this.bookmarkMap.set(b.question.id, b.id);
-      });
-    }
   }
 }

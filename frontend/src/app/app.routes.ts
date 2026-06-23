@@ -13,18 +13,6 @@ export const routes: Routes = [
         .then((m) => m.QuestionListComponent)
   },
   {
-    path: 'admin/questions/new',
-    loadComponent: () =>
-      import('./features/admin/question-form/question-form.component')
-        .then((m) => m.QuestionFormComponent)
-  },
-  {
-    path: 'admin/questions/:id/edit',
-    loadComponent: () =>
-      import('./features/admin/question-form/question-form.component')
-        .then((m) => m.QuestionFormComponent)
-  },
-  {
     path: 'browse',
     loadComponent: () =>
       import('./features/browse/browse/browse.component')

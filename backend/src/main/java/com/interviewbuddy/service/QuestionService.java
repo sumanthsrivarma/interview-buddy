@@ -4,7 +4,6 @@ import com.interviewbuddy.domain.DifficultyLevel;
 import com.interviewbuddy.domain.Question;
 import com.interviewbuddy.domain.TechStack;
 import com.interviewbuddy.domain.Topic;
-import com.interviewbuddy.dto.QuestionRequest;
 import com.interviewbuddy.dto.QuestionResponse;
 import com.interviewbuddy.repository.QuestionRepository;
 import jakarta.persistence.criteria.Predicate;
@@ -45,45 +44,6 @@ public class QuestionService {
         return repository.findById(id)
                 .map(QuestionResponse::from)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Question not found"));
-    }
-
-    @Transactional
-    public QuestionResponse create(QuestionRequest request) {
-        Question question = new Question();
-        applyRequest(question, request);
-        question.setActive(true);
-        return QuestionResponse.from(repository.save(question));
-    }
-
-    @Transactional
-    public QuestionResponse update(UUID id, QuestionRequest request) {
-        Question question = repository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Question not found"));
-        applyRequest(question, request);
-        return QuestionResponse.from(repository.save(question));
-    }
-
-    @Transactional
-    public void deactivate(UUID id) {
-        Question question = repository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Question not found"));
-        question.setActive(false);
-        repository.save(question);
-    }
-
-    private void applyRequest(Question question, QuestionRequest request) {
-        question.setTitle(request.getTitle());
-        question.setBody(request.getBody());
-        question.setAnswer(request.getAnswer());
-        question.setFollowUpProbes(request.getFollowUpProbes());
-        question.setTopic(request.getTopic());
-        question.setTechStack(request.getTechStack());
-        question.setDifficultyLevel(request.getDifficultyLevel());
-        question.setExperienceRangeMin(request.getExperienceRangeMin());
-        question.setExperienceRangeMax(request.getExperienceRangeMax());
-        question.setTags(request.getTags() != null
-                ? request.getTags().toArray(String[]::new)
-                : new String[0]);
     }
 
     private Specification<Question> buildSpec(
