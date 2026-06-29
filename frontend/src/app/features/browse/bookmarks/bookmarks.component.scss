@@ -1,11 +1,92 @@
-.empty { color: rgba(0,0,0,0.54); padding: 24px 0; }
-.bookmark-panel { margin-bottom: 8px; }
-.body-text { color: rgba(0,0,0,0.7); line-height: 1.6; }
-.note-row { display: flex; align-items: center; gap: 4px; margin-top: 8px; }
-.note-text { flex: 1; color: rgba(0,0,0,0.6); font-style: italic; }
-.full-width { width: 100%; margin-top: 8px; }
-.edit-actions { display: flex; gap: 8px; justify-content: flex-end; }
-.badge { padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
-.badge-easy { background: #e8f5e9; color: #2e7d32; }
-.badge-medium { background: #fff8e1; color: #f57f17; }
+.bookmarks-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 16px;
+  color: #666;
+  text-align: center;
+
+  .empty-icon {
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    color: #ccc;
+    margin-bottom: 16px;
+  }
+}
+
+.bookmark-card {
+  margin-bottom: 16px;
+
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .question-text {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.4;
+      white-space: normal;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.meta-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.note-text {
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.note-empty {
+  color: rgba(0, 0, 0, 0.38);
+  font-style: italic;
+  margin: 0;
+}
+
+.inline-edit {
+  .note-field {
+    width: 100%;
+  }
+
+  .edit-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+}
+
+.difficulty-easy { background-color: #e8f5e9 !important; color: #2e7d32 !important; }
+.difficulty-medium { background-color: #fff8e1 !important; color: #f57f17 !important; }
+.difficulty-hard { background-color: #ffebee !important; color: #c62828 !important; }
+
 .badge-hard { background: #fce4ec; color: #c62828; }
