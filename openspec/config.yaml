@@ -1,0 +1,47 @@
+schema: spec-driven
+
+rules:
+  proposal:
+    - Begin with a "Significance" paragraph (2–4 sentences) explaining why this feature matters
+      to the user's interview preparation workflow and the value it delivers.
+    - End with an "Improvement Opportunities" section listing 3–5 concrete enhancements
+      that could be built on top of this feature in the future (with brief rationale for each).
+    - Include a "Non-goals" section clearly stating what is out of scope.
+    - Keep the proposal concise — the Significance + body + Improvement Opportunities should
+      together be under 600 words.
+
+  specs:
+    - Every functional requirement MUST include a "Test Use Cases" subsection with at least
+      2 concrete examples in Given/When/Then format, using realistic data from the domain
+      (e.g., actual Topic enum values, realistic question text, confidence levels).
+    - Include an "API Contract" section listing each endpoint with method, path, request body
+      shape, and response shape.
+    - Include an "Error Cases" section listing at least 3 error scenarios with HTTP status codes.
+
+  design:
+    - Produce a High-Level Design (HLD) section that includes:
+        * A Mermaid component diagram showing how frontend, backend, and database layers interact
+          for this feature.
+        * A short narrative (3–5 sentences) describing the overall data flow.
+    - Produce a Low-Level Design (LLD) section that includes:
+        * A Mermaid sequence diagram showing the full request/response flow from Angular component
+          through service → REST controller → service → repository → DB and back.
+        * A Mermaid ER diagram (or table diff) showing any new or changed DB tables/columns.
+        * Class-level design notes for new Java classes (entity, DTO, service method signatures,
+          repository method signatures).
+        * Component-level design notes for new Angular components/services (inputs, outputs,
+          injected services, key methods).
+    - All diagrams must use valid Mermaid syntax enclosed in ```mermaid fenced blocks.
+
+  tasks:
+    - Every task must reference the artifact (spec section or design element) it implements.
+    - Group tasks into two explicit sections: "Backend Tasks" and "Frontend Tasks".
+    - Add a final task group "Git Commits" containing exactly two tasks:
+        1. Commit all backend changes with message format:
+           feat(backend): <short imperative description of what was built>
+           (list changed files: src/main/java/... and db/migration/...)
+        2. Commit all frontend changes with message format:
+           feat(frontend): <short imperative description of what was built>
+           (list changed files: src/app/...)
+    - Each task should be completable in 1–2 hours maximum.
+    - Tasks must be ordered by dependency (no task depends on an incomplete prior task).
