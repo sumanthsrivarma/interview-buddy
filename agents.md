@@ -172,4 +172,36 @@ These rules apply to every feature, in every layer, without exception.
 - **Do not change `SecurityConfig`** for any feature work. Security configuration is not a feature task.
 - **Do not use `ddl-auto: create` or `ddl-auto: update`** in `application.yml`. Schema is managed by Flyway exclusively.
 
--
+---
+
+## 7. Codebase Navigation — Graphify Knowledge Graph
+
+A pre-built knowledge graph of this repository lives in [`graphify-out/`](graphify-out/). Use it to understand structure and relationships **before** searching or editing — it is faster and more accurate than reading files blindly, and it surfaces cross-layer connections (e.g. which Angular component maps to which DTO and entity).
+
+### When to use it
+
+- Before implementing a feature that touches code you haven't read yet — locate the relevant entities, DTOs, services, and components.
+- When you need to know what depends on a class before changing it (impact analysis).
+- When you are unsure which file owns a concept — query the graph instead of guessing.
+
+### How to use it
+
+The graph is queryable via the `graphify` CLI (already installed). Run commands from the repo root:
+
+```bash
+graphify query "how does the bookmark feature flow from UI to database"   # BFS — broad context across files
+graphify query "what depends on QuestionResponse" --dfs                    # DFS — trace one dependency path
+graphify path "BookmarksComponent" "Bookmark"                              # shortest path between two concepts
+graphify explain "MockSession"                                             # plain-language summary of one node
+```
+
+If the CLI is unavailable, read the static artifacts directly:
+
+- [`graphify-out/GRAPH_REPORT.md`](graphify-out/GRAPH_REPORT.md) — god nodes (most-connected core abstractions), community hubs, and surprising cross-layer links. Start here for a map of the codebase.
+- [`graphify-out/graph.json`](graphify-out/graph.json) — full nodes/edges for programmatic lookup.
+- [`graphify-out/graph.html`](graphify-out/graph.html) — interactive visual graph.
+
+### Rules
+
+- Treat the graph as a **navigation aid, not ground truth** — always confirm against the actual source file before editing.
+- The graph is a generated artifact. Do not hand-edit files under `graphify-out/`; regenerate with `graphify . --update` after significant code changes.

@@ -15,6 +15,10 @@ InterviewBuddy is a single-user interview preparation tool: question bank, mock 
 
 Before starting any task, read [`AGENTS.md`](../AGENTS.md) in the project root. It defines the full domain vocabulary, architectural constraints, and explicit anti-patterns. Do not skip it.
 
+## Codebase Navigation
+
+A pre-built knowledge graph lives in [`graphify-out/`](../graphify-out/). Use it to locate relevant code and trace cross-layer relationships **before** editing. Query it with the `graphify` CLI (e.g. `graphify query "bookmark feature flow"`, `graphify path "BookmarksComponent" "Bookmark"`, `graphify explain "MockSession"`), or read [`graphify-out/GRAPH_REPORT.md`](../graphify-out/GRAPH_REPORT.md) for god nodes and community hubs. See section 7 of `AGENTS.md` for full usage. Treat it as a navigation aid — always confirm against the real source before changing code.
+
 ## Layer Routing
 
 | When working on… | Also read… |
