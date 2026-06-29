@@ -1,0 +1,44 @@
+# .graphifyignore — gitignore-style patterns for graphify
+# Tells graphify what NOT to include in the knowledge graph.
+#
+# Already auto-skipped by graphify (no entry needed):
+#   node_modules/  dist/  target/  .angular/  .git/
+#   package-lock.json  yarn.lock  pnpm-lock.yaml
+
+# ── Node / npm ─────────────────────────────────────────────────────────────────
+package.json
+*.npmrc
+
+# ── Maven / Java build ─────────────────────────────────────────────────────────
+pom.xml
+mvnw
+mvnw.cmd
+.mvn/
+*.class
+*.jar
+*.war
+
+# ── Angular / TypeScript config ────────────────────────────────────────────────
+angular.json
+tsconfig.json
+tsconfig.*.json
+proxy.conf.json
+.editorconfig
+
+# ── Docker / infra ─────────────────────────────────────────────────────────────
+docker-compose.yml
+Dockerfile
+*.dockerfile
+
+# ── Logs & generated reports ───────────────────────────────────────────────────
+*.log
+coverage/
+
+# ── IDE / OS noise ────────────────────────────────────────────────────────────
+.DS_Store
+*.iml
+Thumbs.db
+
+# ── Secrets / env ─────────────────────────────────────────────────────────────
+.env
+.env.*

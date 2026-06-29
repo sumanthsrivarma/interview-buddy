@@ -1,11 +1,55 @@
-<mat-card class="placeholder-card">
-  <mat-card-header>
-    <mat-card-title>
-      <mat-icon>bookmark_border</mat-icon>
-      Bookmarks
-    </mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p class="coming-soon">Coming soon in the next version.</p>
-  </mat-card-content>
-</mat-card>
+<div class="bookmarks-container">
+  <h2 class="page-title">
+    <mat-icon>bookmark</mat-icon>
+    Bookmarks
+  </h2>
+
+  @if (bookmarks.length === 0) {
+    <div class="empty-state">
+      <mat-icon class="empty-icon">bookmark_border</mat-icon>
+      <p>No bookmarks saved yet. Browse questions and bookmark the ones you want to revisit.</p>
+    </div>
+  }
+
+  @for (bookmark of bookmarks; track bookmark.id) {
+    <mat-card class="bookmark-card">
+      <mat-card-header>
+        <mat-card-title class="question-text">{{ bookmark.questionText }}</mat-card-title>
+        <div class="card-actions">
+          <button mat-icon-button (click)="startEdit(bookmark)" [disabled]="editingId === bookmark.id" aria-label="Edit note">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteBookmark(bookmark.id)" aria-label="Delete bookmark">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="meta-chips">
+          <mat-chip>{{ bookmark.topic }}</mat-chip>
+          <mat-chip class="difficulty-chip difficulty-{{ bookmark.difficultyLevel | lowercase }}">{{ bookmark.difficultyLevel }}</mat-chip>
+        </div>
+
+        @if (editingId === bookmark.id) {
+          <div class="inline-edit">
+            <mat-form-field appearance="outline" class="note-field">
+              <mat-label>Personal note</mat-label>
+              <textarea matInput [formControl]="editNoteControl" rows="3"></textarea>
+            </mat-form-field>
+            <div class="edit-actions">
+              <button mat-flat-button color="primary" (click)="saveNote(bookmark)">Save</button>
+              <button mat-button (click)="cancelEdit()">Cancel</button>
+            </div>
+          </div>
+        } @else {
+          @if (bookmark.note) {
+            <p class="note-text">{{ bookmark.note }}</p>
+          } @else {
+            <p class="note-empty">No note added.</p>
+          }
+        }
+      </mat-card-content>
+    </mat-card>
+  }
+</div>

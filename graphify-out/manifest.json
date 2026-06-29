@@ -1,0 +1,552 @@
+{
+  "/Users/sumanth.srivarma/projects/interview-buddy/V2__seed_questions.sql": {
+    "mtime": 1782199807.1351805,
+    "ast_hash": "808e6bc761e3e91f09fb2a7eddc2d295",
+    "semantic_hash": "808e6bc761e3e91f09fb2a7eddc2d295"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/main.ts": {
+    "mtime": 1782202598.9072056,
+    "ast_hash": "c986c915181c0d91d6ea1af9fc003131",
+    "semantic_hash": "c986c915181c0d91d6ea1af9fc003131"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/app.routes.ts": {
+    "mtime": 1782480601.9287295,
+    "ast_hash": "d29bbc8cec085d157b303d8d9f0f0fb3",
+    "semantic_hash": "d29bbc8cec085d157b303d8d9f0f0fb3"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/app.component.ts": {
+    "mtime": 1782202598.9072595,
+    "ast_hash": "0d7e00e2bff092d4103231a2d2cba34d",
+    "semantic_hash": "0d7e00e2bff092d4103231a2d2cba34d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/app.config.ts": {
+    "mtime": 1782206019.5137138,
+    "ast_hash": "c675677413dd746526b5d1847aa58413",
+    "semantic_hash": "c675677413dd746526b5d1847aa58413"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/models/question.model.ts": {
+    "mtime": 1782204638.717894,
+    "ast_hash": "ed8be9eaf1e5f3765ffafbc43e5d443b",
+    "semantic_hash": "ed8be9eaf1e5f3765ffafbc43e5d443b"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/models/session.model.ts": {
+    "mtime": 1782205726.3673482,
+    "ast_hash": "883112ed3b88649b90a906b4aaef1e54",
+    "semantic_hash": "883112ed3b88649b90a906b4aaef1e54"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/models/bookmark.model.ts": {
+    "mtime": 1782205726.367361,
+    "ast_hash": "139c3ae0100bc1965cbdd822d175e967",
+    "semantic_hash": "139c3ae0100bc1965cbdd822d175e967"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/models/dashboard.model.ts": {
+    "mtime": 1782205726.36738,
+    "ast_hash": "3591a2c67528580b51c873b0c974d0b4",
+    "semantic_hash": "3591a2c67528580b51c873b0c974d0b4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/services/dashboard.service.ts": {
+    "mtime": 1782205726.3673909,
+    "ast_hash": "ca023391b196acf5eeb85c25034a4a14",
+    "semantic_hash": "ca023391b196acf5eeb85c25034a4a14"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/services/bookmark.service.ts": {
+    "mtime": 1782205726.367444,
+    "ast_hash": "bacaebdf3baea906e4deb01b3d078644",
+    "semantic_hash": "bacaebdf3baea906e4deb01b3d078644"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/services/question.service.ts": {
+    "mtime": 1782480632.6421168,
+    "ast_hash": "efd2820b36d4aee1a2335c27068d2240",
+    "semantic_hash": "efd2820b36d4aee1a2335c27068d2240"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/core/services/session.service.ts": {
+    "mtime": 1782205726.3673682,
+    "ast_hash": "30a8eea29de71916955ec8325f7d58d4",
+    "semantic_hash": "30a8eea29de71916955ec8325f7d58d4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/admin/question-list/question-list.component.ts": {
+    "mtime": 1782480477.9670854,
+    "ast_hash": "a58307ac857699d9d3807bdedf11d022",
+    "semantic_hash": "a58307ac857699d9d3807bdedf11d022"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/admin/question-form/question-form.component.ts": {
+    "mtime": 1782204638.7178738,
+    "ast_hash": "3304088eebbfbc3cc603661f79bb1f64",
+    "semantic_hash": "3304088eebbfbc3cc603661f79bb1f64"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/dashboard/dashboard/dashboard.component.ts": {
+    "mtime": 1782205945.0699608,
+    "ast_hash": "8e8df1431d07f73133d9dc60f362908f",
+    "semantic_hash": "8e8df1431d07f73133d9dc60f362908f"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/browse/question-detail/question-detail.component.ts": {
+    "mtime": 1782486967.2316947,
+    "ast_hash": "e34c181c4179de2ef509abc3cdec394f",
+    "semantic_hash": "e34c181c4179de2ef509abc3cdec394f"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/browse/bookmarks/bookmarks.component.ts": {
+    "mtime": 1782488854.0888948,
+    "ast_hash": "7fc3ab8ec1eed50941572597daef1aa9",
+    "semantic_hash": "7fc3ab8ec1eed50941572597daef1aa9"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/browse/browse/browse.component.ts": {
+    "mtime": 1782531086.4183025,
+    "ast_hash": "38771a91d0382520d1e06dea83b9fb5e",
+    "semantic_hash": "38771a91d0382520d1e06dea83b9fb5e"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-summary/session-summary.component.ts": {
+    "mtime": 1782205817.99157,
+    "ast_hash": "df7915470d5348a1f82ef318ac8b5944",
+    "semantic_hash": "df7915470d5348a1f82ef318ac8b5944"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-history/session-history.component.ts": {
+    "mtime": 1782205882.2435596,
+    "ast_hash": "bf61cabeba6d062e43f25804f21288b0",
+    "semantic_hash": "bf61cabeba6d062e43f25804f21288b0"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-config/session-config.component.ts": {
+    "mtime": 1782205785.3851,
+    "ast_hash": "6cc7a12f46629f18832b2d118df84fe9",
+    "semantic_hash": "6cc7a12f46629f18832b2d118df84fe9"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/active-session/active-session.component.ts": {
+    "mtime": 1782205785.3851318,
+    "ast_hash": "2641228e42d1a704822366cbe6d0663d",
+    "semantic_hash": "2641228e42d1a704822366cbe6d0663d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-review/session-review.component.ts": {
+    "mtime": 1782205882.2435277,
+    "ast_hash": "798a6bbc52af5180d101e4571a148670",
+    "semantic_hash": "798a6bbc52af5180d101e4571a148670"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/environments/environment.prod.ts": {
+    "mtime": 1782202598.907235,
+    "ast_hash": "0de919438ef36cd5a0ea0b8e08f981b3",
+    "semantic_hash": "0de919438ef36cd5a0ea0b8e08f981b3"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/environments/environment.ts": {
+    "mtime": 1782202598.9072268,
+    "ast_hash": "4c3b4227f910af0203ef570eeed704d3",
+    "semantic_hash": "4c3b4227f910af0203ef570eeed704d3"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/test/java/com/interviewbuddy/InterviewBuddyApplicationTests.java": {
+    "mtime": 1782202599.083424,
+    "ast_hash": "fff06a5a909cfbcddca4ef455faedeac",
+    "semantic_hash": "fff06a5a909cfbcddca4ef455faedeac"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/resources/db/migration/V2__seed_questions.sql": {
+    "mtime": 1782203677.7545009,
+    "ast_hash": "e80c3ce9d4a09fad00cfeca98eb73783",
+    "semantic_hash": "e80c3ce9d4a09fad00cfeca98eb73783"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/resources/db/migration/V1__init_schema.sql": {
+    "mtime": 1782202598.9069118,
+    "ast_hash": "c83e3124da8bfb3c6e4094d9dc92c3ae",
+    "semantic_hash": "c83e3124da8bfb3c6e4094d9dc92c3ae"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/InterviewBuddyApplication.java": {
+    "mtime": 1782202598.9348059,
+    "ast_hash": "a3b11de9c690a1e9e36e1ba392322448",
+    "semantic_hash": "a3b11de9c690a1e9e36e1ba392322448"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/WeakAreaDto.java": {
+    "mtime": 1782205726.3675272,
+    "ast_hash": "e2cfa3b718a4f7b50ed2e7260e089015",
+    "semantic_hash": "e2cfa3b718a4f7b50ed2e7260e089015"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/TopicBreakdownDto.java": {
+    "mtime": 1782205726.3675365,
+    "ast_hash": "646f37bbcd1cc1d64008e4bb49895ba0",
+    "semantic_hash": "646f37bbcd1cc1d64008e4bb49895ba0"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/QuestionResponse.java": {
+    "mtime": 1782204638.7611613,
+    "ast_hash": "2aed53152ff4d7a9e4707075be7215f2",
+    "semantic_hash": "2aed53152ff4d7a9e4707075be7215f2"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/AttemptRequest.java": {
+    "mtime": 1782205726.3675532,
+    "ast_hash": "3dec60b7f834a666fbb2e5e0c1361886",
+    "semantic_hash": "3dec60b7f834a666fbb2e5e0c1361886"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/SessionRequest.java": {
+    "mtime": 1782205726.3675187,
+    "ast_hash": "0091069b3015eee71ecf3e84fabc20a5",
+    "semantic_hash": "0091069b3015eee71ecf3e84fabc20a5"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/AttemptResponse.java": {
+    "mtime": 1782205726.3675036,
+    "ast_hash": "ec25ddc0f980cc456437957694cf6ddb",
+    "semantic_hash": "ec25ddc0f980cc456437957694cf6ddb"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/SessionDetailResponse.java": {
+    "mtime": 1782205726.3674686,
+    "ast_hash": "19b08531d8a8702a61b6fdb05907f1f4",
+    "semantic_hash": "19b08531d8a8702a61b6fdb05907f1f4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/WeeklyStreakDto.java": {
+    "mtime": 1782205726.3675632,
+    "ast_hash": "f36d4f97dd5d0b915f4a7299c6538061",
+    "semantic_hash": "f36d4f97dd5d0b915f4a7299c6538061"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/SessionResponse.java": {
+    "mtime": 1782205726.367488,
+    "ast_hash": "52f1742cf3d536ef1d51d9a55a27c208",
+    "semantic_hash": "52f1742cf3d536ef1d51d9a55a27c208"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/dto/package-info.java": {
+    "mtime": 1782202598.9089284,
+    "ast_hash": "c95a83bc543408cdb40bbe18bc099f2e",
+    "semantic_hash": "c95a83bc543408cdb40bbe18bc099f2e"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/repository/QuestionRepository.java": {
+    "mtime": 1782204638.761184,
+    "ast_hash": "269e6681c6a233d5461b7f75b17a2c09",
+    "semantic_hash": "269e6681c6a233d5461b7f75b17a2c09"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/repository/SessionAttemptRepository.java": {
+    "mtime": 1782205726.3674788,
+    "ast_hash": "f13c6bec807d684a39594144913729e1",
+    "semantic_hash": "f13c6bec807d684a39594144913729e1"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/repository/MockSessionRepository.java": {
+    "mtime": 1782205726.3674564,
+    "ast_hash": "d6a588d50b2e0b570159f6bdc0fb12c7",
+    "semantic_hash": "d6a588d50b2e0b570159f6bdc0fb12c7"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/repository/package-info.java": {
+    "mtime": 1782202598.9347904,
+    "ast_hash": "5c41826f036f769dc6db4616dee7b7f3",
+    "semantic_hash": "5c41826f036f769dc6db4616dee7b7f3"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/config/SecurityConfig.java": {
+    "mtime": 1782204638.761172,
+    "ast_hash": "7bb0b541b6b16bc6a9cfb52050ed9adb",
+    "semantic_hash": "7bb0b541b6b16bc6a9cfb52050ed9adb"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/config/package-info.java": {
+    "mtime": 1782202598.9089375,
+    "ast_hash": "a91703a7bb9c880a44ac978f9d604636",
+    "semantic_hash": "a91703a7bb9c880a44ac978f9d604636"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/controller/QuestionController.java": {
+    "mtime": 1782480457.0568478,
+    "ast_hash": "43ab02a06707c30de18aa61a358f574c",
+    "semantic_hash": "43ab02a06707c30de18aa61a358f574c"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/controller/DashboardController.java": {
+    "mtime": 1782205726.3675745,
+    "ast_hash": "8b9d5fb4f54aeaaf1e8438d0d664776d",
+    "semantic_hash": "8b9d5fb4f54aeaaf1e8438d0d664776d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/controller/MockSessionController.java": {
+    "mtime": 1782205726.3678336,
+    "ast_hash": "5494f14c60f5152e457426a1c8a3e770",
+    "semantic_hash": "5494f14c60f5152e457426a1c8a3e770"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/controller/package-info.java": {
+    "mtime": 1782202598.9088695,
+    "ast_hash": "7a9b01e0f3c7501eb07d79b1362e937b",
+    "semantic_hash": "7a9b01e0f3c7501eb07d79b1362e937b"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/service/DashboardService.java": {
+    "mtime": 1782205726.3678234,
+    "ast_hash": "d8747558aa2aeef17b574d729e853752",
+    "semantic_hash": "d8747558aa2aeef17b574d729e853752"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/service/QuestionService.java": {
+    "mtime": 1782480457.056847,
+    "ast_hash": "555e0ec876b06d3f89dcf4806783ea77",
+    "semantic_hash": "555e0ec876b06d3f89dcf4806783ea77"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/service/MockSessionService.java": {
+    "mtime": 1782205726.3675475,
+    "ast_hash": "3750b1e37b8ab07464af58a509b3262d",
+    "semantic_hash": "3750b1e37b8ab07464af58a509b3262d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/service/package-info.java": {
+    "mtime": 1782202599.0834486,
+    "ast_hash": "ffa7507b7dce7ac231c2aca8f1fa93be",
+    "semantic_hash": "ffa7507b7dce7ac231c2aca8f1fa93be"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/Confidence.java": {
+    "mtime": 1782205726.36734,
+    "ast_hash": "2d3bae1fbe438af3d962d0aaf681a915",
+    "semantic_hash": "2d3bae1fbe438af3d962d0aaf681a915"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/DifficultyLevel.java": {
+    "mtime": 1782204638.7611165,
+    "ast_hash": "cfb5ae3bca6fa0c1906a72ce580104ae",
+    "semantic_hash": "cfb5ae3bca6fa0c1906a72ce580104ae"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/SessionStatus.java": {
+    "mtime": 1782205726.3673217,
+    "ast_hash": "8c6ce8c36d53e6acc0e5ae5fde02e16f",
+    "semantic_hash": "8c6ce8c36d53e6acc0e5ae5fde02e16f"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/Question.java": {
+    "mtime": 1782204638.7611299,
+    "ast_hash": "4eabdde066847fb06855119bb229a208",
+    "semantic_hash": "4eabdde066847fb06855119bb229a208"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/Topic.java": {
+    "mtime": 1782204638.744271,
+    "ast_hash": "5aecb4c0880826865efcdc27f64193af",
+    "semantic_hash": "5aecb4c0880826865efcdc27f64193af"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/SessionAttempt.java": {
+    "mtime": 1782205726.3674383,
+    "ast_hash": "43617abd75a614ffa416ecd4d81821e7",
+    "semantic_hash": "43617abd75a614ffa416ecd4d81821e7"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/TechStack.java": {
+    "mtime": 1782204638.7179654,
+    "ast_hash": "de6c161619d59eb711d272865f5747e4",
+    "semantic_hash": "de6c161619d59eb711d272865f5747e4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/MockSession.java": {
+    "mtime": 1782205726.3673325,
+    "ast_hash": "59703a893e9a87188c338311ee4dd872",
+    "semantic_hash": "59703a893e9a87188c338311ee4dd872"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/java/com/interviewbuddy/domain/package-info.java": {
+    "mtime": 1782202598.9089217,
+    "ast_hash": "68029e8feefe4b989d7aff7460c5c58f",
+    "semantic_hash": "68029e8feefe4b989d7aff7460c5c58f"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/modernize/java-upgrade/hooks/scripts/recordToolUse.sh": {
+    "mtime": 1782533349.5924335,
+    "ast_hash": "e25ae501603ce6bf738198f5ce32ba83",
+    "semantic_hash": "e25ae501603ce6bf738198f5ce32ba83"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/modernize/java-upgrade/hooks/scripts/recordToolUse.ps1": {
+    "mtime": 1782533349.5928676,
+    "ast_hash": "9ecf230451dfd20ff4e0a2a01e80a4e6",
+    "semantic_hash": "9ecf230451dfd20ff4e0a2a01e80a4e6"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/interview-buddy-requirements.md": {
+    "mtime": 1782199807.128485,
+    "ast_hash": "73c364c95959ed790ff62fc5eabf6181",
+    "semantic_hash": "73c364c95959ed790ff62fc5eabf6181"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/agents.md": {
+    "mtime": 1782487520.0737023,
+    "ast_hash": "e352ef1783b99121f38253c4ae7c3a27",
+    "semantic_hash": "e352ef1783b99121f38253c4ae7c3a27"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/index.html": {
+    "mtime": 1782202598.907199,
+    "ast_hash": "a8520ba6c844ce46566e8094846416e4",
+    "semantic_hash": "a8520ba6c844ce46566e8094846416e4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/app.component.html": {
+    "mtime": 1782202598.9072695,
+    "ast_hash": "3bfa05b8e647992d6b5589f4c9a7d1a5",
+    "semantic_hash": "3bfa05b8e647992d6b5589f4c9a7d1a5"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/admin/question-list/question-list.component.html": {
+    "mtime": 1782480468.907348,
+    "ast_hash": "97aa1b2bc42de748b4854d8d4338ec38",
+    "semantic_hash": "97aa1b2bc42de748b4854d8d4338ec38"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/admin/question-form/question-form.component.html": {
+    "mtime": 1782204638.7179453,
+    "ast_hash": "61c84a0aab7c7697a872815758062c7d",
+    "semantic_hash": "61c84a0aab7c7697a872815758062c7d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/dashboard/dashboard/dashboard.component.html": {
+    "mtime": 1782206019.5137231,
+    "ast_hash": "61bc67f2c10913f2c4608a8d0400937e",
+    "semantic_hash": "61bc67f2c10913f2c4608a8d0400937e"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/browse/question-detail/question-detail.component.html": {
+    "mtime": 1782486967.2312462,
+    "ast_hash": "c093125f58265c02f4149d2a36b55768",
+    "semantic_hash": "c093125f58265c02f4149d2a36b55768"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/browse/bookmarks/bookmarks.component.html": {
+    "mtime": 1782488854.088354,
+    "ast_hash": "b44fe475cb00a36e5554ec90e2d720b9",
+    "semantic_hash": "b44fe475cb00a36e5554ec90e2d720b9"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/browse/browse/browse.component.html": {
+    "mtime": 1782531086.417952,
+    "ast_hash": "bc87431e92ca82acc4617007427b44d1",
+    "semantic_hash": "bc87431e92ca82acc4617007427b44d1"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-summary/session-summary.component.html": {
+    "mtime": 1782205817.992426,
+    "ast_hash": "eeb1f5567377dbafcdf08ece5f9b4853",
+    "semantic_hash": "eeb1f5567377dbafcdf08ece5f9b4853"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-history/session-history.component.html": {
+    "mtime": 1782205882.2435825,
+    "ast_hash": "020f4290c74b4687e9dfcfcbcc7de822",
+    "semantic_hash": "020f4290c74b4687e9dfcfcbcc7de822"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-config/session-config.component.html": {
+    "mtime": 1782205785.3851538,
+    "ast_hash": "2c475c06611a3002d4dd02217cc5d3cb",
+    "semantic_hash": "2c475c06611a3002d4dd02217cc5d3cb"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/active-session/active-session.component.html": {
+    "mtime": 1782205817.9916048,
+    "ast_hash": "ed43e080a8dfa216ae0a9e7da7dd92ac",
+    "semantic_hash": "ed43e080a8dfa216ae0a9e7da7dd92ac"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/frontend/src/app/features/session/session-review/session-review.component.html": {
+    "mtime": 1782205917.7316105,
+    "ast_hash": "5fb2dda7d42fb692afaee266a0000396",
+    "semantic_hash": "5fb2dda7d42fb692afaee266a0000396"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/backend/src/main/resources/application.yml": {
+    "mtime": 1782202896.640505,
+    "ast_hash": "38a1da05bcb70aab6e5db35b5e20eeb2",
+    "semantic_hash": "38a1da05bcb70aab6e5db35b5e20eeb2"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/copilot-instructions.md": {
+    "mtime": 1782486977.7092826,
+    "ast_hash": "b5c57d38929b336d66221bbef7f2c1a3",
+    "semantic_hash": "b5c57d38929b336d66221bbef7f2c1a3"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/instructions/java-instructions.md": {
+    "mtime": 1782488205.8924005,
+    "ast_hash": "d59383c2b4e70452dfb4da3f8567563d",
+    "semantic_hash": "d59383c2b4e70452dfb4da3f8567563d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/instructions/angular-instructions.md": {
+    "mtime": 1782486977.7098615,
+    "ast_hash": "f082ba9dbafbbd49c25f7f8a89e9e719",
+    "semantic_hash": "f082ba9dbafbbd49c25f7f8a89e9e719"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/instructions/java-test-instructions.md": {
+    "mtime": 1782486977.710994,
+    "ast_hash": "d6ca280e6f8f7d5b2ac8aa26ae81697f",
+    "semantic_hash": "d6ca280e6f8f7d5b2ac8aa26ae81697f"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-verify.prompt.md": {
+    "mtime": 1782531183.92212,
+    "ast_hash": "65264f406b872b015211f7368383e656",
+    "semantic_hash": "65264f406b872b015211f7368383e656"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-ff.prompt.md": {
+    "mtime": 1782531183.920815,
+    "ast_hash": "68e1f9edaa7487d714bc7b889f53733d",
+    "semantic_hash": "68e1f9edaa7487d714bc7b889f53733d"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-continue.prompt.md": {
+    "mtime": 1782531183.9197395,
+    "ast_hash": "6bfdbcf06eefc7c0bfb01e20522d09a4",
+    "semantic_hash": "6bfdbcf06eefc7c0bfb01e20522d09a4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-bulk-archive.prompt.md": {
+    "mtime": 1782531183.921822,
+    "ast_hash": "94172a51465377f5c9192858ea5b61e5",
+    "semantic_hash": "94172a51465377f5c9192858ea5b61e5"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/summarise-changes-in-branch.prompt.md": {
+    "mtime": 1782533004.477766,
+    "ast_hash": "c9e072c906143d0fbfbd279c870be7dd",
+    "semantic_hash": "c9e072c906143d0fbfbd279c870be7dd"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-propose.prompt.md": {
+    "mtime": 1782531183.9227338,
+    "ast_hash": "54c8d81441a57671450d903206978447",
+    "semantic_hash": "54c8d81441a57671450d903206978447"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-sync.prompt.md": {
+    "mtime": 1782531183.921178,
+    "ast_hash": "ff37c63c11efaf5ba6982a083d692714",
+    "semantic_hash": "ff37c63c11efaf5ba6982a083d692714"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-new.prompt.md": {
+    "mtime": 1782531183.9193368,
+    "ast_hash": "b544e23ac69eb702b67b0641f9a32396",
+    "semantic_hash": "b544e23ac69eb702b67b0641f9a32396"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-apply.prompt.md": {
+    "mtime": 1782531183.9200711,
+    "ast_hash": "bb34cb1101207c46f0bb431f7b8e0c5a",
+    "semantic_hash": "bb34cb1101207c46f0bb431f7b8e0c5a"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-explore.prompt.md": {
+    "mtime": 1782531183.918803,
+    "ast_hash": "499dae8cb9d463bc7e7fa0a43a5634bc",
+    "semantic_hash": "499dae8cb9d463bc7e7fa0a43a5634bc"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-onboard.prompt.md": {
+    "mtime": 1782531183.9223952,
+    "ast_hash": "35d4ec2eea1cedce31b102a5d51b6820",
+    "semantic_hash": "35d4ec2eea1cedce31b102a5d51b6820"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/prompts/opsx-archive.prompt.md": {
+    "mtime": 1782531183.9215589,
+    "ast_hash": "ff9017090a9eb3643dd810c32915d03b",
+    "semantic_hash": "ff9017090a9eb3643dd810c32915d03b"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-apply-change/SKILL.md": {
+    "mtime": 1782531183.9124703,
+    "ast_hash": "113ad4a13c30634311141d6dadcc0464",
+    "semantic_hash": "113ad4a13c30634311141d6dadcc0464"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-explore/SKILL.md": {
+    "mtime": 1782531183.9106784,
+    "ast_hash": "d160105373f4fe54bfbe1790b343c51b",
+    "semantic_hash": "d160105373f4fe54bfbe1790b343c51b"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-verify-change/SKILL.md": {
+    "mtime": 1782531183.9168556,
+    "ast_hash": "590d531c456cf2ab5fc5a966c3c5fb0e",
+    "semantic_hash": "590d531c456cf2ab5fc5a966c3c5fb0e"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-new-change/SKILL.md": {
+    "mtime": 1782531183.9115472,
+    "ast_hash": "0cdc26632213a3f476e888d48d21ff0e",
+    "semantic_hash": "0cdc26632213a3f476e888d48d21ff0e"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-archive-change/SKILL.md": {
+    "mtime": 1782531183.9153461,
+    "ast_hash": "f010cb3292d101742592bcad1abfe762",
+    "semantic_hash": "f010cb3292d101742592bcad1abfe762"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-onboard/SKILL.md": {
+    "mtime": 1782531183.9173672,
+    "ast_hash": "3632b93353cfc12b5f14967419f2210b",
+    "semantic_hash": "3632b93353cfc12b5f14967419f2210b"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/spring-rest-api/SKILL.md": {
+    "mtime": 1782532114.4716036,
+    "ast_hash": "feddedb26e63d1206dc61e65bf228d7f",
+    "semantic_hash": "feddedb26e63d1206dc61e65bf228d7f"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-propose/SKILL.md": {
+    "mtime": 1782531183.9177315,
+    "ast_hash": "0753f4a4ce92da2b27bef07c994bef17",
+    "semantic_hash": "0753f4a4ce92da2b27bef07c994bef17"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-bulk-archive-change/SKILL.md": {
+    "mtime": 1782531183.9158359,
+    "ast_hash": "7289c3287328e38b7925dcd8eb0464d6",
+    "semantic_hash": "7289c3287328e38b7925dcd8eb0464d6"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-continue-change/SKILL.md": {
+    "mtime": 1782531183.9119995,
+    "ast_hash": "ea7ab3d94ad87c0d64b168bea910bfc4",
+    "semantic_hash": "ea7ab3d94ad87c0d64b168bea910bfc4"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-sync-specs/SKILL.md": {
+    "mtime": 1782531183.9144487,
+    "ast_hash": "d269e14a2598498a608dc7eb9f6d82a6",
+    "semantic_hash": "d269e14a2598498a608dc7eb9f6d82a6"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/.github/skills/openspec-ff-change/SKILL.md": {
+    "mtime": 1782531183.9136488,
+    "ast_hash": "1387e5a1f2de8155bfa96044cdf05a34",
+    "semantic_hash": "1387e5a1f2de8155bfa96044cdf05a34"
+  },
+  "/Users/sumanth.srivarma/projects/interview-buddy/openspec/config.yaml": {
+    "mtime": 1782531183.9234312,
+    "ast_hash": "9e3e7672b387a282583011181ab35f9a",
+    "semantic_hash": "9e3e7672b387a282583011181ab35f9a"
+  }
+}
